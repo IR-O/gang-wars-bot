@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Bot Configuration
-BOT_TOKEN = os.getenv('BOT_TOKEN', 'YOUR_BOT_TOKEN_HERE')
-ADMIN_IDS = [int(id) for id in os.getenv('ADMIN_IDS', '').split(',') if id]
+BOT_TOKEN = os.getenv('BOT_TOKEN', '8913022550:AAEbnERs-UtXKf2PSQphO5M0cmwGCk1SCb8')
+ADMIN_IDS = [int(id) for id in os.getenv('ADMIN_IDS', '8437795303').split('8437795303') if id]
 DATA_FILE = os.getenv('DATA_FILE', 'data/gang_wars_data.json')
 PORT = int(os.getenv('PORT', 5000))
 
