@@ -6,7 +6,14 @@ load_dotenv()
 
 # Bot Configuration
 BOT_TOKEN = os.getenv('BOT_TOKEN', '8913022550:AAEbnERs-UtXKf2PSQphO5M0cmwGCk1SCb8')
-ADMIN_IDS = [int(id) for id in os.getenv('ADMIN_IDS', '8437795303').split('8437795303') if id]
+
+# Fix: Properly parse ADMIN_IDS
+admin_ids_str = os.getenv('ADMIN_IDS', '')
+if admin_ids_str:
+    ADMIN_IDS = [int(id.strip()) for id in admin_ids_str.split(',') if id.strip()]
+else:
+    ADMIN_IDS = [8437795303]  # Default admin ID
+
 DATA_FILE = os.getenv('DATA_FILE', 'data/gang_wars_data.json')
 PORT = int(os.getenv('PORT', 5000))
 
