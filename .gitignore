@@ -1,1 +1,9 @@
-.
+*.pyc
+__pycache__/
+data/*.json
+.env
+*.log
+.DS_Store
+venv/
+env/
+.venv/
